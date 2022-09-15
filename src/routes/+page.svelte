@@ -1,24 +1,31 @@
 <script>
     let picture = "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80";
-    // let picture = "../../profile_img.png";
+    let colors = {
+        1 : "text-yellow-500",   // yellow
+        2 : "text-gray-400",     // gray
+        3 : "text-black",        // black
+    }
+
     function createTextLevel1(text){
-        return '<div class="pb-4 text-yellow-500 font-bold text-xl">'+text+'</div>';
+        return '<div class="'+colors[1]+' pb-4 font-bold text-xl">'+text+'</div>';
     }
     function createTextLevel2(text){
-        return '<div class="font-bold text-l">'+text+'</div>';
+        return '<div class="'+colors[3]+' font-bold text-l">'+text+'</div>';
     }
     function createTextLevel3(text){
-        return '<div class="pr-4 font-bold text-xs">'+text+'</div>';
+        return '<div class="'+colors[3]+' pr-4 font-bold text-xs">'+text+'</div>';
     }
     function createTextLevel4(text){
-        return '<div class="text-gray-400 text-xs">'+text+'</div>';
+        return '<div class="'+colors[2]+' text-xs">'+text+'</div>';
     }
     function createTextLevel5(text){
-        return '<li class="text-gray-400 text-xs">'+text+'</li>';
+        return '<li class="'+colors[2]+' text-xs">'+text+'</li>';
     }
     function createStars(num_of_filled_stars){
-        return '<span class="fa fa-star text-xs"></span>'.repeat(num_of_filled_stars) + '<span class="fa fa-star text-xs" style="color:grey;"></span>'.repeat(5-num_of_filled_stars);
+        return ('<span class="'+colors[3] +' fa fa-star text-xs"></span>').repeat(num_of_filled_stars) + ('<span class="'+colors[2] +' fa fa-star text-xs"></span>').repeat(5-num_of_filled_stars);
     }
+
+    
 
 </script>
 <main>
